@@ -1,0 +1,9 @@
+<h1>Post to Reddit</h1>
+<!-- <p>Find me in app/views/users/new.html.erb</p> -->
+
+<%= simple_form_for(@post) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.input :user_id %>
+    <%= f.button :submit %>
+<% end %>
