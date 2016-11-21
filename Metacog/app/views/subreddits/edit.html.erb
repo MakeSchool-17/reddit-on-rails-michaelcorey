@@ -1,12 +1,14 @@
 <div class="container">
     <h1><%= @subreddit.name %></h1>
-    <%= form_for @subreddit do |f| %>
-    <p>
-        <%= f.label :description %><br>
-        <%= f.text_area :description %>
-    </p>
-    <p>
-        <%= f.submit 'Submit' %>
-    </p>
-    <% end %>
+    <div class="row">
+        <%= form_for @subreddit do |f| %>
+        <p class="col-sm-12">
+            <%= f.label :description %><br>
+            <%= f.text_area :description, class: "col-sm-12", style: "height: 120px;" %>
+        </p>
+        <p>
+            <%= f.submit 'Submit' %>
+        </p>
+        <% end %>
+    </div>
 </div>

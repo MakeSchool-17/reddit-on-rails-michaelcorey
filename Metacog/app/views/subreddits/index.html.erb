@@ -1,12 +1,12 @@
 <h1>Subreddits</h1>
 <div class="container">
     <% @subreddits.each do |subreddit| %>
-        <%= link_to subreddit.name, controller: "subreddits", action: "show", id: subreddit   %>
-        <div class="row">
-            <div class="postBody col-sm-9">
-                <%= subreddit.description %>
-            </div>
+    <%= link_to subreddit.name, controller: "subreddits", action: "show", id: subreddit   %>
+    <div class="row">
+        <div class="postBody col-sm-9">
+            <%= subreddit.description %>
         </div>
-        <hr>
+    </div>
+    <hr>
     <% end %>
 </div>
