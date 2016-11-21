@@ -1,12 +1,13 @@
-
-<%= form_for(@subreddit) do |s| %>
-<h4>Subreddits</h4>
-<div class="form-group">
-    <%= s.text_field :name, class:"form-control" %>
-    <hr>
-    <%= s.text_area :description, class:"form-control" %>
+<div class="container">
+    <%= form_for(@subreddit) do |s| %>
+    <h4>Subreddits</h4>
+    <div class="form-group">
+        <%= s.text_field :name, class:"form-control", placeholder: "Subreddit Title" %>
+        <hr>
+        <%= s.text_area :description, class:"form-control", placeholder: "Subreddit Description" %>
+    </div>
+    <div class="text-xs-right">
+        <%= submit_tag "Submit", class: 'btn btn-default' %>
+    </div>
+    <% end %>
 </div>
-<div class="text-xs-right">
-    <%= submit_tag "Submit", class: 'btn btn-default' %>
-</div>
-<% end %>

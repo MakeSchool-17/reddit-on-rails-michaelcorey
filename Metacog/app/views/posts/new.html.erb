@@ -1,15 +1,17 @@
-<legend>New Post</legend>
+<div class="container">
+    <legend>New Post</legend>
 
 
-<%= form_for [@subreddit, @post] do |f| %>
-<h4>New Post</h4>
-<div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :body %>
-    <%= f.text_field :body %>
+    <%= form_for [@subreddit, @post] do |f| %>
+    <h4>New Post</h4>
+    <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        <%= f.label :body %>
+        <%= f.text_field :body %>
+    </div>
+    <div class="text-xs-right">
+        <%= submit_tag "Submit", class: 'btn btn-default' %>
+    </div>
+    <% end %>    
 </div>
-<div class="text-xs-right">
-    <%= submit_tag "Submit", class: 'btn btn-default' %>
-</div>
-<% end %>

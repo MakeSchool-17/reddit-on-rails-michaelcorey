@@ -8,17 +8,7 @@
     <hr>
     <h4>Posts</h4>
     <hr>
-    <%= form_for [@subreddit, @post] do |p| %>
-    <div class="form-group">
-        <%= p.label :title %>
-        <%= p.text_field :title %>
-        <%= p.label :body %>
-        <%= p.text_field :body %>
-    </div>
-    <div class="text-xs-right">
-        <%= submit_tag "Submit", class: 'btn btn-default' %>
-    </div>
-    <% end %>
+    <%= link_to "New Post", new_subreddit_post_path(@subreddit) %>   
     <!-- <%= link_to "Add Post", :action=>"new", :controller=>"posts", :subreddit_id=>"1"  %> -->
     <% @subreddit.posts[0..-2].each do |post| %>
     <!-- <%= link_to post, controller: "posts", action: "show", id: post do  %> -->

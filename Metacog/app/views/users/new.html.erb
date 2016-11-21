@@ -1,11 +1,18 @@
-<h1>Signup!</h1>
-
-<%= form_for(@user) do |f| %>
-
-  <p>Name: <%= f.text_field :name %></p>
-  <p>Email: <%= f.text_field :email %></p>
-  <p>Password: <%= f.password_field :password %></p>
-  <p>Password Confirmation: <%= f.password_field :password_confirmation %></p>
-  <%= f.submit "Submit" %>
-
-<% end %>
+<div class="container form-control">
+    <h1>Signup!</h1>
+    <%= form_for(@user) do |f| %>
+        <div class="row">
+            <%= f.text_field :name, class: "sm-offset-4 col-sm-4", placeholder: "Username"%>
+        </div>
+        <div class="row">
+            <%= f.text_field :email, class: "sm-offset-4 col-sm-4", placeholder: "Email"%>
+        </div>
+        <div class="row">
+            <%= f.password_field :password, class: "sm-offset-4 col-sm-4", placeholder: "Password"%>
+        </div>
+        <div class="row">
+            <%= f.password_field :password_confirmation, class: "sm-offset-4 col-sm-4", placeholder: "Confirm Password"%>
+        </div>
+    <%= f.submit "Submit", class: "col-sm-3"%>
+    <% end %>
+</div>
