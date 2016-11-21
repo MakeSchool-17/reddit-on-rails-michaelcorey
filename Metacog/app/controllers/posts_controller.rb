@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   end
 
   def new
+      @subreddit = Subreddit.find(params[:subreddit_id])
       @post = Post.new
   end
 

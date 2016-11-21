@@ -6,6 +6,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <nav class="navbar navbar-light bg-faded">
+        <ul class="nav navbar-nav">
+            <li class="navbar-brand">
+                <%= link_to image_tag("logo.png", size: "30x30"), subreddits_url %>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Recent Posts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Top Posts</a>
+            </li>
+        </ul>
+    </nav>
   </head>
 
   <body>
